@@ -33,11 +33,11 @@ def deploy():
         port = request.form['port']
         other = request.form['other']
         loginfo = ''
-        '''
+        
         cmd = 'docker pull %s'%(image_name)
         os.popen(cmd)
         loginfo+=cmd+'\n'
-        '''
+        
         cmd = 'docker stop %s'%(run_name)
         loginfo+=cmd+'\n'
         print(os.popen(cmd).read())
