@@ -3,9 +3,9 @@
 
 #############################################
 # File Name: setup.py
-# Author: LiangjunFeng
-# Mail: zhumavip@163.com
-# Created Time:  2018-4-16 19:17:34
+# Author: stosc
+# Mail: stosc@sidaxin.com
+# Created Time:  2020-2-3 19:17:34
 #############################################
 
 from setuptools import setup, find_packages            #这个包没有的可以pip一下

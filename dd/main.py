@@ -12,7 +12,7 @@ class DdServiceDaemon(Daemon):
         sys.stdout.write('Daemon started with pid %s，port is %s\n'%(os.getpid(),port))
         while True:
             ddService = os.popen('ps -fe | grep "%s" | grep -v "grep" | wc -l'%(dd.__serverName__)).read().strip()
-            #筛选出进程中含有tomcat且不含有grep，计算出现行数。修改上面的进程监控语句以适应其他应用需求
+            
             if (ddService == '0'):
                 os.system('/usr/local/bin/%s -p %s'%(dd.__serverName__,port))
                 sys.stdout.write('%sd Daemon Alive! %s\n'%(dd.__daemonName__, time.ctime()))
